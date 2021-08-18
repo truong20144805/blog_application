@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View blog</title>
+</head>
+<body>
+<h1>View blog</h1>
+<p>
+    <a href="/home">Blog list</a>
+</p>
+<input th:type="hidden" name="id" th:text="${blog.getId()}">
+<table>
+    <tr>
+        <td>Title:</td>
+        <td><textarea th:text="${blog.getTitle()}" cols="100" rows="2"/></td>
+    </tr>
+    <tr>
+        <td>Last name:</td>
+        <td><textarea th:text="${blog.getContent()}" cols="200" rows="5"/></td>
+    </tr>
+</table>
+
+</body>
+</html>
